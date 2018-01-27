@@ -1,0 +1,1 @@
+{"data":[{"country":"CV","rooms":843,"regional":"MED","latitude":-22.9236,"name":"Sol Dunas","destination":"Isla de Sal","hotel":"7066","category":"5 *****","brand":"Sol","hotel_url":"sol-dunas","longitude":16.616}]}

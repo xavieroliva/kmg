@@ -1,0 +1,5 @@
+condition_l=code
+condition_operator=EQUAL
+condition_r="melia"
+publisher_true=..\true
+publisher_false=..\false

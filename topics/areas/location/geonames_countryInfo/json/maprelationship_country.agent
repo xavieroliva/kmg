@@ -1,0 +1,5 @@
+source_code=iso
+source_label="country"
+target_code=continent
+target_label="continent"
+relationship_type="PART"

@@ -1,0 +1,5 @@
+condition_l=code
+condition_operator=LENGTH
+condition_r=5
+publisher_true=..\true
+publisher_false=..\false

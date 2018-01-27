@@ -1,0 +1,5 @@
+source_code=ID
+source_label="aws_resource"
+target_code=Region
+target_label="aws_region"
+relationship_type="IN"

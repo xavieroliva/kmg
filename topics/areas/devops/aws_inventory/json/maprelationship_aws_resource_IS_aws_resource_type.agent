@@ -1,0 +1,5 @@
+source_code=ID
+source_label="aws_resource"
+target_code=Resource type
+target_label="aws_resource_type"
+relationship_type="IS"

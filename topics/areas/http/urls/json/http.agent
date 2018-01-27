@@ -1,0 +1,4 @@
+publisher_errors=\areas\http\urls\http_errors
+publisher_headers=\areas\http\urls\http_headers
+publisher_status=\areas\http\urls\http_status
+publisher_results=\areas\http\urls\http_results

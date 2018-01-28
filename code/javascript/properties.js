@@ -33,7 +33,10 @@ function properties_add(json,key,value){
 //------------------------------------------------------------------------------
 function properties_get(json,key){
   var p=JSON.parse(json);
-  return p[key];
+  if(p[key]!==undefined)
+    return p[key];
+  else
+    return null;
 }
 //------------------------------------------------------------------------------
 function properties_delete(json,key){

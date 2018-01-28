@@ -27,7 +27,13 @@ function Execute(agent,record)
       publisher.key=record.key;
       publisher.value=properties_add(record.value,"token",result);
       publisher.topic=agent.publisher;
-
+      return publisher;
+      break;
+    case "folder":
+      // folder
+      // extension
+      // pattern
+      var filename=calculateFile(agent.parameters.folder);
       break;
     case "extract":
       break;
@@ -45,4 +51,26 @@ function Execute(agent,record)
       break;
   }
 
+}
+//------------------------------------------------------------------------------
+function calculateFile(metafile,agent){
+  if (metafile==undefined)
+    return "";
+  else
+    if(metafile.charAt(0)=="."){
+     if(metafile.charAt(1)==".")
+       return kmg+"\\data"+agent.replace(/\\[^\\]+\\[^\\]+$/, '') + metafile.slice(2);
+     else
+       return kmg+"\\data"+agent.replace(/\\[^\\]+$/, '') + metafile.slice(1);
+    }
+    else
+  	  return metafile;
+}
+//------------------------------------------------------------------------------
+function calculateFilePattern(extension,pattern){
+  if(extension!=""){
+    return ".+\."+extension;
+  } else {
+    return pattern;
+  }
 }

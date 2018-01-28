@@ -1,0 +1,35 @@
+CP Code;CP Code Name;Contracts;Product/Services;Reporting Groups;Default Timezone;Override Timezone;Type;Disallow CP Code Purge
+554189;Cloud Monitor;3-1FBT0R0;EdgeConnect Cloud Monitoring;;GMT 1 (Western Europe);;Regular;false
+499864;Cloud Security Failover;3-1FBT0R0;Kona Security Solutions, Botman Manager;;GMT 1 (Western Europe);;Regular;false
+586873;cloudmonitor-CP;3-1FBT0R0;EdgeConnect Cloud Monitoring;;GMT 1 (Western Europe);;Regular;false
+560262;cloudmonitor.melia.com;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+600350;KSD;3-1FBT0R0;Kona Security Solutions, Site Defender;;GMT 1 (Western Europe);;Regular;false
+382741;media.melia.cn chinaCDN;"C-1DTN5FD; 3-1FBT0R0";Web Experience China secure delivery;;GMT 1 (Western Europe);;China;false
+382745;media.melia.cn Ion;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+382747;media.melia.com chinaCDN;"C-1DTN5FD; 3-1FBT0R0";Web Experience China secure delivery;;GMT 1 (Western Europe);;China;false
+382695;media.melia.com Ion;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+573369;melia.cn - derivative;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+573368;melia.cn - pristine;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+381639;mobile.melia.com;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+372328;NetStorage;3-1FBT0R0;NetStorage;;GMT 1 (Western Europe);;Regular;false
+584585;productsup;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+381640;protraining.melia.com;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+560399;static.melia.com;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+573030;static.melia.com - derivative;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+573029;static.melia.com - pristine;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+382748;video.melia.com chinaCDN;"C-1DTN5FD; 3-1FBT0R0";Web Experience China secure delivery;;GMT 1 (Western Europe);;China;false
+382696;video.melia.com Ion;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+641263;worktrippers.innside.com;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+492258;wp-int.melia.com;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+464777;wp-pre.melia.com;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+639414;www.clubmelia.com;3-1FBT0R0;Kona Security Solutions, Site Defender;;GMT 1 (Western Europe);;Regular;false
+573372;www.melia.com - derivative;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+573371;www.melia.com - pristine;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+381638;www.melia.com chinaCDN;"C-1DTN5FD; 3-1FBT0R0";Web Experience China secure delivery;;GMT 1 (Western Europe);;China;false
+372327;www.melia.com Ion;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+393335;www.melia.com Ion Failover;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+443236;www1.melia.com;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+573377;www1.melia.com - derivative;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+573376;www1.melia.com - prisitine;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false
+469886;www1.melia.com chinaCDN;"3-1FBT0R0; C-1DTN5FD";Web Experience China secure delivery;;GMT 1 (Western Europe);;China;false
+641269;www2.melia.com;3-1FBT0R0;Ion Standard;;GMT 1 (Western Europe);;Regular;false

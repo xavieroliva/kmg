@@ -30,10 +30,26 @@ function Execute(agent,record)
       return publisher;
       break;
     case "folder":
-      // folder
-      // extension
-      // pattern
-      var filename=calculateFile(agent.parameters.folder);
+      break;
+    case "filecsv":
+      // value
+      // headers
+      // separator
+      // field
+      // filter
+      break;
+    case "filerow":
+      // value
+      // headers
+      // separator
+      // field
+      // filter
+      break;
+    case "mysqltable":
+      // schema
+      // table
+      break;
+    case "mysqlsql":
       break;
     case "extract":
       break;
@@ -48,6 +64,12 @@ function Execute(agent,record)
     case "csv":
       break;
     case "fileload":
+      var filename=agent.parameters.filename;
+      var publisher;
+      publisher.key=filename;
+      publisher.value=properties_add(record.value,"content",fileread(filename));
+      publisher.topic=agent.publisher;
+      return publisher;
       break;
   }
 

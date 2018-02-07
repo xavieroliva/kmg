@@ -5,7 +5,16 @@ function Execute(agent,record)
   //service:
   //parameters:
   //record
-  switch(agent.service)
+  var agent_object=agents[agent];
+  if(agent_object === undefined)
+    Alert(agent + " undefined");
+
+  if(record==null)
+    record="{}";
+  var record_object=JSON.parse(record);
+
+  var publisher={};
+  switch(agent_object.service)
   {
     case "token":
       // si agent.filename es nulo
@@ -16,18 +25,15 @@ function Execute(agent,record)
       // else
       //   metastring=loadFile(filename)
 
-      var metastring=agent.parameters.metastring;
-      var properties=record.value;
-      var token_start=agent.parameters.token_start;
-      var token_end=agent.parameters.token_end;
+      var metastring=agent_object.parameters.metastring;
+//      var properties=record_object.value;
+      var token_start=agent_object.parameters.token_start;
+      var token_end=agent_object.parameters.token_end;
 
-      var result=token_string(metastring,properties,token_start,token_end);
+      var result=token_string(metastring,record,token_start,token_end);
 
-      var publisher;
-      publisher.key=record.key;
-      publisher.value=properties_add(record.value,"token",result);
-      publisher.topic=agent.publisher;
-      return publisher;
+      publisher.key=record_object.key;  //no tiene el valor
+      publisher.value=properties_add(record,"token",result);
       break;
     case "folder":
       break;
@@ -63,16 +69,20 @@ function Execute(agent,record)
       break;
     case "csv":
       break;
+    case "context":
+      publisher.key="context";
+      publisher.value=getContext();
+      publisher.topic=agent_object.publisher;
+      break;
     case "fileload":
-      var filename=agent.parameters.filename;
-      var publisher;
+      // filename:
+      var filename=calculateConfig(getArgument(agent_object.parameters.filename, record),agent);
       publisher.key=filename;
-      publisher.value=properties_add(record.value,"content",fileread(filename));
-      publisher.topic=agent.publisher;
-      return publisher;
+//      publisher.value=properties_add(map(record,agent_object.parameters),"content",fileread(filename));
+      publisher.value=properties_add(record,"content",fileread(filename));
       break;
   }
-
+  return publisher;
 }
 //------------------------------------------------------------------------------
 function calculateFile(metafile,agent){
@@ -84,6 +94,20 @@ function calculateFile(metafile,agent){
        return kmg+"\\data"+agent.replace(/\\[^\\]+\\[^\\]+$/, '') + metafile.slice(2);
      else
        return kmg+"\\data"+agent.replace(/\\[^\\]+$/, '') + metafile.slice(1);
+    }
+    else
+  	  return metafile;
+}
+//------------------------------------------------------------------------------
+function calculateConfig(metafile,agent){
+  if (metafile==undefined)
+    return "";
+  else
+    if(metafile.charAt(0)=="."){
+     if(metafile.charAt(1)==".")
+       return kmg+"\\topics"+agent.replace(/\\[^\\]+\\[^\\]+$/, '') + metafile.slice(2);
+     else
+       return kmg+"\\topics"+agent.replace(/\\[^\\]+$/, '') + metafile.slice(1);
     }
     else
   	  return metafile;

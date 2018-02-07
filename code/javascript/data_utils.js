@@ -1,8 +1,8 @@
 //------------------------------------------------------------------------------
-function csv(value,fields,separator,filter)
+function csv(value,fields,separator)
 {
-  var result=JSON.parse("{}");
-  if(value.length!=0 && value.charAt(0)!=filter)
+  var result={};
+  if(value.length!=0)
   {
     var values = value.split(separator);
     var keys   = fields.split(",");
@@ -12,13 +12,41 @@ function csv(value,fields,separator,filter)
       function generate(field,index,array)
       {
         var key=keys[index];
-        if(key=="")
+        if(key===undefined)
           key="field"+("0"+index).slice(-2);
         result[key]=field;
       }
     )
   }
   return JSON.stringify(result);
+}
+//------------------------------------------------------------------------------
+function contentcsv(content,header,fields,separator,filter)
+{
+  var rows=content.split("\n");
+  var result=[];
+  var keys;
+  for(var i=0;i<rows.length;i++){
+    if(rows[i].slice(filter.length)!=filter){
+      if(keys==undefined){
+        if(header=="Y")
+          keys=rows[i].replace(separator,",");
+        else
+          keys=fields;
+      }
+      // normalize keys
+      else {
+        var object=csv(rows[i],keys,separator,filter);
+        result.push(JSON.parse(object));
+      }
+    }
+  }
+  return JSON.stringify(result);
+}
+//------------------------------------------------------------------------------
+function contentrow(content)
+{
+
 }
 //------------------------------------------------------------------------------
 function extractone(value,pattern,fields)
@@ -182,5 +210,17 @@ function pathmaker(value,separator)
   // code: "c:\folder1"  parent: "c:" name: "folder1"
   // code: "c:\folder1\folder2" parent: "c:\folder1" name: "folder2"
   // code: "c:\folder1\folder2\file.txt" parent: name:
-
+}
+//------------------------------------------------------------------------------
+function getContext()
+{
+  var context="{}";
+  context=properties_add(context,"time",Date());
+  context=properties_add(context,"user",getEnvironmentVar("user.name"));
+  context=properties_add(context,"timezone",getEnvironmentVar("user.timezone"));
+  context=properties_add(context,"country",getEnvironmentVar("user.country"));
+  context=properties_add(context,"language",getEnvironmentVar("user.language"));
+  context=properties_add(context,"os",getEnvironmentVar("os.name"));
+  context=properties_add(context,"home",getEnvironmentVar("folder_kmg"));
+  return context;
 }

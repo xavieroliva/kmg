@@ -61,3 +61,23 @@ function getValue(value,source){
     argument=extracted[1];
   return argument;
 }
+//------------------------------------------------------------------------------
+function getArgument(value,source){
+//  var pattern_property = new RegExp("^\[(\w+)\]$","g");
+  var pattern_property = new RegExp(/^\[(.+)\]$/g);
+  var pattern_context = new RegExp("^%(\w+)$","g");
+  var extracted;
+  var source_object=JSON.parse(source);
+  var argument;
+  if((extracted=pattern_property.exec(value))!==null)
+  {
+    argument=source_object[extracted[1]];
+  }
+  else{
+    if((extracted=pattern_context.exec(value))!==null)
+      argument=context[extracted[1]];
+    else
+    {  argument=value; }
+  }
+  return argument;
+}

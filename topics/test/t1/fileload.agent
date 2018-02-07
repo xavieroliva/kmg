@@ -1,0 +1,4 @@
+subscriber=
+publisher=.\file
+filename=.\sample.sql
+execution_ttl=600

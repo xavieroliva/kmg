@@ -13,3 +13,21 @@ function calculateTopic(metatopic,agent){
 	else
 	  return metatopic
 }
+//------------------------------------------------------------------------------
+function publish(topic,key,value)
+{
+  // segun el tipo de contenido del topics
+  // unique keys: one key only
+  // stream:
+  // version: keep n versions of records with same key
+  // time: delete all records older than time
+  // syncro: topic content detects differences and sincronizes
+  var sql="INSERT INTO kmge.records (topic,key,value) VALUES ('" + topic + "','" + key + "','" + value + "')";
+  var connection="mysql";
+  var result=fireToDB(connection,sql);
+  if (result.length>0)
+    return true;
+  else
+    return false;
+  // INSERT INTO kmge.records (topic,key,value) VALUES ("","","")
+}

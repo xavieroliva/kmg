@@ -1,9 +1,21 @@
-<mxfile host="app.diagrams.net" modified="2023-05-27T12:31:04.840Z" agent="Mozilla/5.0 (iPhone; CPU iPhone OS 16_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Mobile/15E148 Safari/604.1" version="21.3.4" etag="BccoQvdrtUXwwIzL5d0i" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-27T12:36:09.240Z" agent="Mozilla/5.0 (iPhone; CPU iPhone OS 16_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Mobile/15E148 Safari/604.1" etag="y6ZaZokOKZu62qh6bRd9" version="21.3.4" type="github">
   <diagram name="Página-1" id="tcxMUiBXi5kO-eIJnkPP">
-    <mxGraphModel>
+    <mxGraphModel dx="118" dy="907" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="Eo0kpGLzhlAcx1qC8vcu-3" value="Grafana" style="html=1;outlineConnect=0;whiteSpace=wrap;fillColor=#99ffff;shape=mxgraph.archimate3.application;appType=comp;archiType=square;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="128" y="-172" width="150" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Eo0kpGLzhlAcx1qC8vcu-4" value="Node red" style="html=1;outlineConnect=0;whiteSpace=wrap;fillColor=#99ffff;shape=mxgraph.archimate3.application;appType=comp;archiType=square;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="137" y="25" width="150" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Eo0kpGLzhlAcx1qC8vcu-5" value="MQTT" style="html=1;outlineConnect=0;whiteSpace=wrap;fillColor=#99ffff;shape=mxgraph.archimate3.application;appType=comp;archiType=square;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="143" y="195" width="150" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Eo0kpGLzhlAcx1qC8vcu-6" value="InfluxDb" style="html=1;outlineConnect=0;whiteSpace=wrap;fillColor=#99ffff;shape=mxgraph.archimate3.application;appType=comp;archiType=square;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="182" y="346" width="150" height="75" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
